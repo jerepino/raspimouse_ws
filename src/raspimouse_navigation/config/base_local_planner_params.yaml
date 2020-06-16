@@ -1,0 +1,12 @@
+TrajectoryPlannerROS:
+# DWAPlannerROS:
+  max_vel_x: 0.2
+  min_vel_x: 0.01
+  max_vel_theta: 2
+  min_in_place_vel_theta: 0.01
+
+  acc_lim_theta: 2
+  acc_lim_x: 0.5
+  acc_lim_y: 0.5
+
+  holonomic_robot: false

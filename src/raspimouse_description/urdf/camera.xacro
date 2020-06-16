@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<robot name="camera" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:arg name="camera_parent_name" default="base_footprint"/>
+  <!-- URDF -->
+  <xacro:include filename="$(find raspimouse_description)/urdf/camera.urdf.xacro"/>
+  <xacro:camera_urdf parent_frame="$(arg camera_parent_name)"/>
+
+  <!-- Gazebo -->
+  <!-- <xacro:include filename="$(find hrwros_support)/urdf/workcell/workcell.gazebo.xacro"/> -->
+</robot>

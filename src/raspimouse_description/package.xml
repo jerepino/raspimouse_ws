@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>raspimouse_description</name>
+  <version>0.1.0</version>
+  <description>The raspimouse_description package</description>
+
+  <maintainer email="shop@rt-net.jp">RT Corporation</maintainer>
+  <author email="tiryoh@gmail.com">Daisuke Sato</author>
+
+  <license>MIT</license>
+
+  <url type="website">https://github.com/rt-net/raspimouse_sim/wiki</url>
+  <url type="repository">https://github.com/rt-net/raspimouse_description</url>
+  <url type="bugtracker">https://github.com/rt-net/raspimouse_description/issues</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>controller_manager</build_depend>
+  <build_depend>control_msgs</build_depend>
+  <build_depend>joint_state_controller</build_depend>
+  <build_depend>diff_drive_controller</build_depend>
+  <depend>urdf</depend>
+  <depend>joint_state_publisher_gui</depend>
+  <depend>robot_state_publisher</depend>
+
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>diff_drive_controller</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>gazebo_ros_control</exec_depend>
+  <exec_depend>joint_state_controller</exec_depend>
+  <exec_depend>rqt_robot_steering</exec_depend>
+  <exec_depend>rviz</exec_depend>
+  <exec_depend>urdf_tutorial</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+
+
+  <export>
+
+  </export>
+</package>

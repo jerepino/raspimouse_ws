@@ -1,0 +1,16 @@
+<launch>
+<group ns="camera_ras">
+  <!-- Add prefix to the display. Now you need to set the prefix in rviz -->
+  <!-- <param name="tf_prefix" value="camera_ras" /> -->
+  <rosparam param="use_sim_time">true</rosparam>
+  <include file="$(find usb_cam)/launch/usb_cam-test.launch"/>
+  <include file="$(find ar_track_alvar)/launch/pr2_indiv_no_kinect.launch">
+    <arg name="marker_size" value="5.4"/>
+    <arg name="cam_image_topic" value="/camera_ras/usb_cam/image_raw"/>
+    <arg name="cam_info_topic" value="/camera_ras/usb_cam/camera_info"/>
+    <arg name="output_frame" value="usb_cam"/>
+  </include>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="camera_to_odom" args="2.85 0.65 1.92 0 3.1415 0 odom usb_cam"/>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="odom_to_map" args="0 0 0 0 0 0 1 map odom"/>
+</group>
+</launch>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="model" default="$(find raspimouse_description)/urdf/raspimouse.urdf.xacro" />
+  <arg name="rvizconfig" default="$(find raspimouse_description)/launch/config/urdf.rviz" />
+  <arg name="gui" default="false" />
+
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+  <!-- Add prefix to the display. Now you need to set the prefix in rviz -->
+  <!-- <param name="tf_prefix" value="ras_tf" /> -->
+
+  <node if="$(arg gui)" name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+  <node unless="$(arg gui)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <node name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(arg rvizconfig)" />
+</launch>

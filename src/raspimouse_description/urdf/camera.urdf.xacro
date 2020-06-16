@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot
+  name="camera_urdf"
+  xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+  xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+  xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+  xmlns:xacro="http://ros.org/wiki/xacro">
+
+
+<xacro:macro name="camera_urdf" params="parent_frame">
+  <!-- <joint name="base_to_right_leg" type="fixed"> <parent link="base_link"/> <child link="right_leg"/> </joint> -->
+  <link name="${parent_frame}"/>
+  <xacro:property name="size_box" value="0.05 0.1 0.05"/>
+  <link name="camera_link">
+    <visual>
+      <geometry>
+        <box size="${size_box}"/>
+      </geometry>
+    </visual>
+    <!-- Add inertial -->
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <box size="${size_box}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="world_to_camera" type="fixed"> <!--Testing floating joint-->
+    <origin xyz="1 1 1" rpy="3.1415926535897931 0 0"/>
+    <parent link="${parent_frame}"/>
+    <child link="camera_link"/>
+  </joint>
+</xacro:macro>
+</robot>
