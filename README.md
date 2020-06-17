@@ -19,7 +19,7 @@ Para la deteccion y el seguimiento de marcadores utilizo el paquete de [ar_track
 ```bash
 sudo apt-get install ros-melodic-ar-track-alvar 
 ```
-Finalmente clonar el repositorio en un catkin work space:
+Finalmente clonar el repositorio:
 
 ```bash
 git clone https://github.com/jerepino/raspimouse_ws.git
