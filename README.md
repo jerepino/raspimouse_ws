@@ -14,15 +14,10 @@ Luego para probar la instalacion:
 ```bash
 roslaunch usb_cam-test.launch
 ```
-Para la detccion y el seguimiento de marcadores utilizo el paquete de [ar_track_alvar](http://wiki.ros.org/ar_track_alvar):
+Para la deteccion y el seguimiento de marcadores utilizo el paquete de [ar_track_alvar](http://wiki.ros.org/ar_track_alvar):
 
 ```bash
 sudo apt-get install ros-melodic-ar-track-alvar 
-```
-Luego para verificar instalacion:
-
-```bash
-roslaunch ar_track_alvar pr2_indiv_no_kinect.launch marker_size:=5.4 cam_image_topic:=/usb_cam/image_raw cam_info_topic:=/usb_cam/camera_info output_frame:=usb_cam
 ```
 Finalmente clonar el repositorio en un catkin work space:
 
