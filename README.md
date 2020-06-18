@@ -36,4 +36,4 @@ Lanzar los siguientes nodos en terminales diferentes:
 ```
 
 ## Acknowledgment
-I used [rt-net /raspimouse_description](https://github.com/rt-net/raspimouse_description) repository. I have made little changes for my project
+I used [rt-net/raspimouse_description](https://github.com/rt-net/raspimouse_description) repository. I have made little changes for my project
