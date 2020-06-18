@@ -31,6 +31,7 @@
     <node name="raspimouse_controller_spawner" pkg="controller_manager" type="spawner"
        args="mobile_base_controller joint_state_controller">
     </node>
+    <!-- convert joint states to TF transforms for rviz, etc -->
     <node pkg="robot_state_publisher" type="robot_state_publisher"  name="raspimouse_state_publisher">
       <param name="publish_frequency" type="double" value="50.0" />
       <!-- <remap from="robot_description" to="/raspimouse_on_gazebo/robot_description"/> -->
@@ -40,8 +41,9 @@
    <!-- push robot_description to factory and spawn robot in gazebo -->
     <node name="raspimouse_spawner" pkg="gazebo_ros" type="spawn_model"
           args="-x 0.5 -y 0.5 -z 0.1 -unpause -urdf -model robot -param /raspimouse_on_gazebo/robot_description" respawn="false" output="screen" launch-prefix="bash -c 'sleep 2.0; $0 $@' "/> <!-- agregue  .0 al 5-->
+
   <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
-  <!-- convert joint states to TF transforms for rviz, etc -->
+  
   <!-- <node name="rqt_robot_steering" pkg="rqt_robot_steering" type="rqt_robot_steering">
     <param name="default_topic" value="/raspimouse_on_gazebo/mobile_base_controller/cmd_vel"/>
   </node> -->
