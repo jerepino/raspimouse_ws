@@ -53,8 +53,8 @@ bool moveBase(	geometry_msgs::TransformStamped goalPose){
 	goal.target_pose.header.frame_id = "map"; //Reference frame for location. In this case relative to robot
 	goal.target_pose.header.stamp = ros::Time::now();
 
-	goal.target_pose.pose.position.x = goalPose.transform.translation.x * 1.5;
-	goal.target_pose.pose.position.y = goalPose.transform.translation.y * 2.0;
+	goal.target_pose.pose.position.x = goalPose.transform.translation.x * 1.5; // Se multiplica para enviar el robot más lejos debido a la reducidad vision de la camara
+	goal.target_pose.pose.position.y = goalPose.transform.translation.y * 2.0; // Se multiplica para enviar el robot más lejos debido a la reducida vision de la camara
 	goal.target_pose.pose.orientation.w = 1.0;
 
 	ROS_INFO("Sending goal (%f,%f)",goal.target_pose.pose.position.x,
