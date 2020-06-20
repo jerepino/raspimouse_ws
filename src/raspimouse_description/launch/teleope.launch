@@ -6,7 +6,7 @@
   <arg name="headless" default="false"/>
   <arg name="debug" default="false"/>
   <arg name="model" default="$(find raspimouse_description)/urdf/raspimouse_urg.urdf.xacro"/>
-  <!--arg name="rvizconfig" default="$(find raspimouse_description)/rviz/test.rviz"/-->
+  <arg name="rvizconfig" default="$(find raspimouse_description)/rviz/test.rviz"/>
 
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
