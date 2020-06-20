@@ -12,7 +12,7 @@ sudo apt-get install ros-melodic-usb-cam
 Luego para probar la instalacion:
 
 ```bash
-roslaunch usb_cam-test.launch
+roslaunch usb_cam usb_cam-test.launch
 ```
 Para la deteccion y el seguimiento de marcadores utilizo el paquete de [ar_track_alvar](http://wiki.ros.org/ar_track_alvar):
 
