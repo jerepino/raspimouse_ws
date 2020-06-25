@@ -1,6 +1,7 @@
 # Realidad Virtual
 VR projecto para la catedra de realidad virtual de la Universidad Nacional de Cuyo.
-
+![Gazebo](/imgs/ras_world.png)
+![Navigation](/imgs/ras_nav.png)
 ## Instalación
 Para la camara instalar [libuvc_camera](https://wiki.ros.org/libuvc_camera) y [usb-cam](https://wiki.ros.org/usb_cam) packages:
 
