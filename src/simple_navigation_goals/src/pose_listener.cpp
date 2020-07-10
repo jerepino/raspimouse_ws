@@ -80,6 +80,6 @@ int main(int argc, char** argv){
 	geometry_msgs::TransformStamped transGoalMsgs;
 	transGoalMsgs = tf_listener();
 	moveBase(transGoalMsgs);
-	ros::spin();
+	ros::spin();   //cambiar por ros::spin_one() y finalizar el nodo
 	return 0;
 }
